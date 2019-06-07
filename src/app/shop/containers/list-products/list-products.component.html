@@ -1,0 +1,16 @@
+<div class="filter-list">
+  <app-filter-products></app-filter-products>
+</div>
+
+<div fxLayout="column" class="product-list">
+  <div fxLayout="row wrap" [@filterAnimation]="(products$ | async).length">
+    <div *ngFor="let product of products$ | async; trackBy :trackById">
+      <app-product-preview [product]="product" (click)="selectProduct(product.id)"></app-product-preview>
+      <button (click)="addToCart(product.id)">
+        Add to Cart
+      </button>
+    </div>
+
+  </div>
+</div>
+

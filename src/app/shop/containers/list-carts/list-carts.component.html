@@ -1,0 +1,12 @@
+<div>
+  <a [routerLink]="['/shops']">Shops</a>
+</div>
+
+<div>
+  <div *ngFor="let item of items$|async;trackBy:trackById">
+    <app-product-preview [product]="item"></app-product-preview>
+    <button (click)="removeToCart(item.id)">
+      Remove to Cart
+    </button>
+  </div>
+</div>

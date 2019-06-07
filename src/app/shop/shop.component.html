@@ -1,0 +1,26 @@
+<div fxLayout="column">
+
+  <div fxLayout="row">
+    <div fxLayout="row" fxFlex fxLayoutAlign="center center">
+      Angular Ngxs shop app
+    </div>
+    <div fxLayout="column" fxLayoutAlign="end center">
+      <div>
+        My Cart : {{countCarts$ | async}}
+      </div>
+      <div>
+        Toal : {{amountCarts$ | async | money}}
+      </div>
+      <div>
+        <button [routerLink]="'carts'">
+          See cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div fxLayout="column">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>

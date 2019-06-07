@@ -1,0 +1,10 @@
+<div>
+  <div fxLayout="row">
+    <app-filter-product-item *ngFor="let cat of categories$ | async; trackBy: trackByKey"
+                             class="filter-item"
+                             (click)="filterChange(cat.key)"
+                             [item]="cat">
+
+    </app-filter-product-item>
+  </div>
+</div>
