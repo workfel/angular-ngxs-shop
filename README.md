@@ -38,6 +38,13 @@ PoC Ngxs.
 ```
 
 #### Components
+- Should be a module
+- All components should be DUMP. Have only `@Input()` & `@Output()`.
+- Add `ChangeDetectionStrategy.OnPush` for avoid memory leak.
 
-All components
+#### Containers
+
+- Is a module
+- Use a `NGXS facade service` for accessing and modifying `NGXS Store`. (see `list-products-facade.service.ts`)
+- The components shouldn't have logic data. Use the `Ngxs State`. 
 
