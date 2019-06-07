@@ -4,6 +4,11 @@ PoC Ngxs.
 
 --**WIP**--
 
+## Installation
+
+`$ npm i && ng serve`
+
+
 ## Architecture
 
 
